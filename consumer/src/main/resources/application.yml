@@ -1,0 +1,14 @@
+logging:
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+spring:
+  rabbitmq:
+    host: 192.168.233.131
+    port: 5672
+    username: wzp
+    password: WZPqq2859572179
+    virtual-host: /
+    listener:
+      simple:
+        prefetch: 1  # 每次只能获取一条消息，处理完成才能获取下一个消息
+        acknowledge-mode: auto  # 消费者确认机制
